@@ -11,5 +11,6 @@ http://www.mulesoft.org/schema/mule/http http://www.mulesoft.org/schema/mule/htt
 		<http:listener doc:name="Listener" doc:id="0f9782e9-86ec-4599-9146-2bb7bfa01453" config-ref="HTTP_Listener_config" path="/push"/>
 		<logger level="INFO" doc:name="Logger" doc:id="762553cf-5848-431c-901d-15971241b40b" message="request received"/>
 		<set-payload value='"hari goud"......' doc:name="Set Payload" doc:id="e20fc1a0-32df-4a12-b22f-8c47e092512a" />
+		<logger level="INFO" doc:name="Logger" doc:id="c9c21c76-bf30-4ba9-9e79-c02ad2b96f59" message="git commit sucessfull...."/>
 	</flow>
 </mule>

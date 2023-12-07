@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<mule xmlns:http="http://www.mulesoft.org/schema/mule/http" xmlns="http://www.mulesoft.org/schema/mule/core"
+	xmlns:doc="http://www.mulesoft.org/schema/mule/documentation"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.mulesoft.org/schema/mule/core http://www.mulesoft.org/schema/mule/core/current/mule.xsd
+http://www.mulesoft.org/schema/mule/http http://www.mulesoft.org/schema/mule/http/current/mule-http.xsd">
+	<http:listener-config name="HTTP_Listener_config" doc:name="HTTP Listener config" doc:id="2aa8d64c-3657-48df-bac9-1f241856c943" >
+		<http:listener-connection host="0.0.0.0" port="8081" />
+	</http:listener-config>
+	<flow name="pushgitFlow" doc:id="c6e93ee6-8a45-4533-80bd-8b111fbe6570" >
+		<http:listener doc:name="Listener" doc:id="0f9782e9-86ec-4599-9146-2bb7bfa01453" config-ref="HTTP_Listener_config" path="/push"/>
+		<logger level="INFO" doc:name="Logger" doc:id="762553cf-5848-431c-901d-15971241b40b" message="request received"/>
+		<set-payload value='"hari goud"......' doc:name="Set Payload" doc:id="e20fc1a0-32df-4a12-b22f-8c47e092512a" />
+	</flow>
+</mule>
